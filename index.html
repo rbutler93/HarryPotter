@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Search for information about Harry Potter Characters.">
+    <title>Harry Potter API</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1> Harry Potter Character Information</h1>
+    <form id='js-form'>
+      <label>Enter a Harry Potter character and we will return that characters bio:
+      </label>
+      <br>
+      <input type="text" class="js-name" name="search-term" value="Harry Potter" required>
+      <button type="submit" id="find-btn">Search</button>
+      <br>
+      <div> Capitalize the first letter of each  name ex. Harry Potter
+      </div>
+    </form>
+    <main>
+      <div >
+        <section class="js-results results hidden"></section>
+      </div>
+    </main>
+    <section>
+      <h2 class="hidden"> Results: </h2>
+    <script src="script.js"></script>
+    </section>
+  </body>
+</html>
