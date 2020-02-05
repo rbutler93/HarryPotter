@@ -1,15 +1,16 @@
 'use strict'
 function displayResults(responseJson) {
-  // console.log(responseJson.map(char => char.name))
   $(responseJson).ready(function () {
         $('.loading').addClass('hidden')
     })
     let character = responseJson[0]
     const characterObject = Object.keys(character).map(key => {
-      return `<h4>${key.toUpperCase()}: <span class="character">${character[key]}</span></h4>`
+      return `<h4> <span class="character">${key}: ${character[key]}</span></h4>`
     })
-    
-  $('.js-results').append(characterObject)
+    const characterIntro = (
+      `<h4> Hello my name is ${character.name}. ${ character.alias ? `I am also known as, ${character.alias}.` : ""} My blood status is ${character.bloodStatus}. ${ character.house ? `I am apart of ${character.house}. ` : ""} ${character.school ? `I go to ${character.school}.` : "" }</h4> `
+    )
+  $('.js-results').append(characterIntro)
   $('.results').removeClass('hidden')
 
 }
@@ -34,6 +35,7 @@ function characterInfo(name) {
             errorMessage('That Character name is not valid');
         });
 }
+
 function getSearchPhrase() {
     return (['Search', 'Find','Look up','Go','Check','Push this button','Enter'])[Math.floor(Math.random() * 7)];
 }
