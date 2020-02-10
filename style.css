@@ -1,3 +1,54 @@
+* {
+  box-sizing:border-box;
+}
+body {
+  font-family:"Comic Sans MS", cursive, sans-serif;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://i.pinimg.com/originals/04/96/cf/0496cf2e342b4c5532c64436a09646b4.jpg);
+  background-size: auto;
+ 
+}
+.text {
+  display: flex;
+  justify-content: center;
+  color:#f89d13;
+}
+.othertext{
+  color:#e6dedd;
+  font-size:22px;
+  padding: 10px;
+ 
+}
 h2 {
   display:none;
+}
+h1 {
+  color:white;
+  font-size:32px;
+}
+input{
+  border: 2px solid;
+}
+
+
+@media only screen and (max-width: 640px) {
+  .othertext{
+    font-size:20px;
+  
+  }
+  button{
+    color:#f89d13;
+    font-size: medium;
+  }
+@media only screen and (max-width: 400px ) {
+  .othertext{
+    font-size:18px;
+    display: flex;
+    text-align: center;
+  }
+
+  button {
+    color: cyan;
+    font-size: medium;
+  }
+
 }

@@ -8,7 +8,7 @@ function displayResults(responseJson) {
       return `<h4> <span class="character">${key}: ${character[key]}</span></h4>`
     })
     const characterIntro = (
-      `<h4> Hello my name is ${character.name}. ${ character.alias ? `I am also known as, ${character.alias}.` : ""} My blood status is ${character.bloodStatus}. ${ character.house ? `I am apart of ${character.house}. ` : ""} ${character.school ? `I go to ${character.school}.` : "" }</h4> `
+      `<h4 class="othertext"> Hello my name is ${character.name}. ${ character.alias ? `I am also known as, ${character.alias}.` : ""} My blood status is ${character.bloodStatus}. ${ character.house ? `I am apart of ${character.house}. ` : ""} ${character.school ? `I go to ${character.school}.` : "" }</h4> `
     )
   $('.js-results').append(characterIntro)
   $('.results').removeClass('hidden')
@@ -16,7 +16,7 @@ function displayResults(responseJson) {
 }
 function errorMessage(error) {
     console.log('errorMessage ran');
-    $('.js-results').html(`<h3 class="error">Something went wrong: ${error}</h3>`)
+    $('.js-results').html(`<h3 class="error othertext">Something went wrong: ${error}</h3>`)
     $('.loading').addClass('hidden');
     $('.js-results').removeClass('hidden')
 }
